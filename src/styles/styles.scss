@@ -69,6 +69,10 @@ body {
           text-align: end;
           padding-right: 16px;
           color: $very-dark-cyan;
+
+          &:hover {
+            border: 3px solid $strong-cyan;
+          }         
         }
       }
     }

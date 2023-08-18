@@ -26,6 +26,10 @@ $white: hsl(0, 0%, 100%);
       .bill-input-container {
         .input-field {
           cursor: pointer;
+
+          &:hover {
+            border: 3px solid $strong-cyan;
+          }         
         }
       }
 
@@ -48,6 +52,7 @@ $white: hsl(0, 0%, 100%);
 
             &:hover {
               background-color: $very-light-grayish-cyan;
+              border: 3px solid $strong-cyan;
             }
           }
         }       
@@ -57,6 +62,7 @@ $white: hsl(0, 0%, 100%);
         .input-field {
           &:hover {
             cursor: pointer;
+            border: 3px solid $strong-cyan;
           }
         }       
       }
