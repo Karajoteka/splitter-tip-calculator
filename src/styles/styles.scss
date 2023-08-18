@@ -1,0 +1,199 @@
+$font-stack: 'Space Mono', monospace;
+$strong-cyan: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$very-light-grayish-cyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-stack;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $light-grayish-cyan;
+
+  header {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  .main-container {
+    width: 375px;
+    padding: 25px;
+    background-color: $white;
+    border-radius: 20px 20px 0 0;
+    font-size: 1.5rem;
+    color: $dark-grayish-cyan;
+
+    .inputs-container {
+
+      .bill-input-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .bill-input-label {
+          
+          img {
+            position: absolute;
+            left: 20px;
+            top: 48px;
+          }
+        }
+
+        .input-field {
+          margin-top: 10px;
+          background-color: $very-light-grayish-cyan;
+          height: 46px;
+          border-radius: 5px;
+          font-size: 2.4rem;
+          font-family: $font-stack;
+          text-align: end;
+          padding-right: 16px;
+          color: $very-dark-cyan;
+        }
+      }
+    }
+
+    .percentage-selection-container {
+      margin-top: 30px;
+
+      .buttons-container {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        gap: 10px;
+        margin-top: 16px;
+
+        .percentage-button {
+          background-color: $very-dark-cyan;
+          color: $white;
+          font-family: $font-stack;
+          font-size: 2.4rem;
+          border-radius: 5px;
+          height: 50px;
+        }
+
+        .custom-percentage-input {
+          background-color: $very-light-grayish-cyan;
+          color: $very-dark-cyan;
+          text-align: end;
+          padding-right: 16px;
+
+          &::placeholder{
+            color: $dark-grayish-cyan;
+          }          
+        }
+      }
+    }
+
+    .people-container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+
+      .people-input-label {
+        
+        img {
+          position: absolute;
+          left: 20px;
+          top: 48px;
+        }
+      }
+
+      .input-field {
+        margin-top: 10px;
+        background-color: $very-light-grayish-cyan;
+        height: 46px;
+        border-radius: 5px;
+        font-size: 2.4rem;
+        font-family: $font-stack;
+        text-align: end;
+        padding-right: 16px;
+        color: $very-dark-cyan;
+      }
+    }
+
+    .results-container {
+      margin-top: 30px;
+      background-color: $very-dark-cyan;
+      border-radius: 10px;
+      padding: 24px;
+
+      .tip-amount-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 14px;
+
+        .text-container {
+
+          .tip-amount {
+            color: $white;
+          }
+
+          .per-person {
+            color: $grayish-cyan;
+            font-size: 1.3rem;
+          }
+        }
+
+        .tip-result {
+          color: $strong-cyan;
+          font-size: 3rem;
+        }
+      }
+
+      .total-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        .text-container {
+
+          .total {
+            color: $white;
+          }
+
+          .per-person {
+            color: $grayish-cyan;
+            font-size: 1.3rem;
+          }
+        }
+
+        .total-result {
+          color: $strong-cyan;
+          font-size: 3rem;
+        }
+      }
+
+      .reset-button {
+        width: 100%;
+        height: 50px;
+        margin-top: 30px;
+        border-radius: 5px;
+        background-color: $strong-cyan;
+        color: $very-dark-cyan;
+        font-family: $font-stack;
+        font-size: 2rem;
+      }
+    }
+  }
+}
