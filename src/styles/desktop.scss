@@ -1,0 +1,51 @@
+$font-stack: 'Space Mono', monospace;
+$strong-cyan: hsl(172, 67%, 45%);
+$very-dark-cyan: hsl(183, 100%, 15%);
+$dark-grayish-cyan: hsl(186, 14%, 43%);
+$grayish-cyan: hsl(184, 14%, 56%);
+$light-grayish-cyan: hsl(185, 41%, 84%);
+$very-light-grayish-cyan: hsl(189, 41%, 97%);
+$white: hsl(0, 0%, 100%);
+
+@media screen and (min-width: 900px) {
+  header {
+    margin-top: 100px !important;
+  }
+  .main-container {
+    width: 900px !important;
+    border-radius: 20px !important;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+
+    .inputs-container {
+      padding-top: 10px;
+
+      .percentage-selection-container {
+
+        .buttons-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+
+          .custom-percentage-input {
+            width: 143px;
+          }
+        }       
+      }
+    }
+    
+    .results-container {
+      margin-top: 0 !important;
+      padding: 40px !important;
+
+      .tip-amount-container {
+        margin-bottom: 40px;
+      }
+
+      .reset-button {
+        margin-top: 100px !important;
+      }
+    }
+  }
+}
