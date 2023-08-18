@@ -104,7 +104,11 @@ body {
 
           &::placeholder{
             color: $dark-grayish-cyan;
-          }          
+          }    
+          
+          &:focus {
+            background-color: $very-light-grayish-cyan;
+          }
         }
       }
     }
@@ -126,7 +130,7 @@ body {
 
       .error-message {
         position: absolute;
-        left: 200px;
+        right: 0;
         color: rgb(217, 114, 59);
       }
 
@@ -152,6 +156,7 @@ body {
       .tip-amount-container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-top: 14px;
 
         .text-container {
@@ -168,13 +173,14 @@ body {
 
         .tip-result {
           color: $strong-cyan;
-          font-size: 3rem;
+          font-size: 3.5rem;
         }
       }
 
       .total-container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin-top: 20px;
 
         .text-container {
@@ -191,7 +197,7 @@ body {
 
         .total-result {
           color: $strong-cyan;
-          font-size: 3rem;
+          font-size: 3.5rem;
         }
       }
 

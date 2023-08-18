@@ -1,5 +1,6 @@
 $font-stack: 'Space Mono', monospace;
 $strong-cyan: hsl(172, 67%, 45%);
+$hover-strong-cyan: hsl(172, 99%, 55%);
 $very-dark-cyan: hsl(183, 100%, 15%);
 $dark-grayish-cyan: hsl(186, 14%, 43%);
 $grayish-cyan: hsl(184, 14%, 56%);
@@ -22,14 +23,40 @@ $white: hsl(0, 0%, 100%);
     .inputs-container {
       padding-top: 10px;
 
-      .percentage-selection-container {
+      .bill-input-container {
+        .input-field {
+          cursor: pointer;
+        }
+      }
 
+      .percentage-selection-container {
         .buttons-container {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
+          
+          .percentage-button {
+            cursor: pointer;
+
+            &:hover {
+              background-color: $hover-strong-cyan;
+              color: $very-dark-cyan;
+            }
+          }
 
           .custom-percentage-input {
             width: 143px;
+
+            &:hover {
+              background-color: $very-light-grayish-cyan;
+            }
+          }
+        }       
+      }
+
+      .people-container {
+        .input-field {
+          &:hover {
+            cursor: pointer;
           }
         }       
       }
@@ -45,6 +72,12 @@ $white: hsl(0, 0%, 100%);
 
       .reset-button {
         margin-top: 100px !important;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $hover-strong-cyan;
+          color: $very-dark-cyan;
+        }
       }
     }
   }
