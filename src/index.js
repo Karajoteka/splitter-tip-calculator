@@ -15,15 +15,6 @@ function calculateTip() {
   const billAmount = parseFloat(billInput.value);
   const numberOfPeople = parseInt(peopleInput.value);
 
-  if (isNaN(billAmount) || isNaN(numberOfPeople) || numberOfPeople <= 0) {
-    tipResult.textContent = '$0.00';
-    totalResult.textContent = '$0.00';
-    errorMessage.classList.add('inactive');
-    return;
-  } else {
-    errorMessage.classList.add('inactive');
-  }
-
   let tipPercentage = 0;
   if (customPercentageInput.value !== '') {
     tipPercentage = parseFloat(customPercentageInput.value);
@@ -35,6 +26,15 @@ function calculateTip() {
     });
   }
 
+  if (isNaN(billAmount) || isNaN(numberOfPeople) || numberOfPeople <= 0) {
+    tipResult.textContent = '$0.00';
+    totalResult.textContent = '$0.00';
+    errorMessage.classList.add('inactive');
+    return;
+  } else {
+    errorMessage.classList.add('inactive');
+  }
+
   const tipAmount = (billAmount * tipPercentage) / 100 / numberOfPeople;
   const totalAmount = (billAmount + (billAmount * tipPercentage) / 100) / numberOfPeople;
 
@@ -42,11 +42,11 @@ function calculateTip() {
   totalResult.textContent = `${totalAmount.toFixed(2)}`;
 }
 
-
 percentageButtons.forEach(button => {
   button.addEventListener('click', () => {
     percentageButtons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
+    customPercentageInput.value = '';
     calculateTip();
   });
 });
