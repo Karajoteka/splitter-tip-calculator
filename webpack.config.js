@@ -11,6 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'docs'),
     filename: 'main.js',
     clean: true,
+    publicPath: './',
   },
   resolve: {
     extensions: ['.js', '.css', '.scss']
@@ -38,6 +39,9 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]',
+        }
       },
     ],
   },
@@ -45,7 +49,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: 'body',
       template: './public/index.html',
-      filename: './index.html'
+      filename: './index.html',
+      publicPath: './',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
